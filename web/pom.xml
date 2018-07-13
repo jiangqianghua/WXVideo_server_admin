@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>jqh-video-admin</artifactId>
+        <groupId>com.jqh</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>web</artifactId>
+    <packaging>war</packaging>
+
+    <name>web Maven Webapp</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+    <!-- 集中定义依赖版本号 -->
+    <properties>
+        <spring.version>4.3.8.RELEASE</spring.version>
+        <spring-data-redis.version>1.8.7.RELEASE</spring-data-redis.version>
+        <mybatis.version>3.2.8</mybatis.version>
+        <mybatis.spring.version>1.2.2</mybatis.spring.version>
+        <mybatis.paginator.version>1.2.15</mybatis.paginator.version>
+        <mysql.version>5.1.41</mysql.version>
+        <slf4j.version>1.7.21</slf4j.version>
+        <jackson.version>2.7.4</jackson.version>
+        <!-- 连接池 阿里巴巴数据源 全世界最牛逼的data source 没有之一 -->
+        <druid.version>1.1.0</druid.version>
+        <httpclient.version>4.3.5</httpclient.version>
+        <commons.httpclient.version>3.1</commons.httpclient.version>
+        <jstl.version>1.2</jstl.version>
+        <servlet-api.version>2.5</servlet-api.version>
+        <jsp-api.version>2.0</jsp-api.version>
+        <joda-time.version>2.5</joda-time.version>
+        <commons-lang3.version>3.3.2</commons-lang3.version>
+        <commons-io.version>1.3.2</commons-io.version>
+        <commons-net.version>3.3</commons-net.version>
+        <pagehelper.version>4.1.3</pagehelper.version>
+        <commons-fileupload.version>1.3.1</commons-fileupload.version>
+        <jedis.version>2.9.0</jedis.version>
+        <apache-commons-pool2>2.4.2</apache-commons-pool2>
+        <log4j.version>1.2.16</log4j.version>
+        <zookeeper.version>3.4.11</zookeeper.version>
+        <curator.version>4.0.0</curator.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jqh</groupId>
+            <artifactId>service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- JSP相关 -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jsp-api</artifactId>
+            <scope>provided</scope>
+            <version>2.0</version>
+        </dependency>
+        <!-- 文件上传组件 -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>web</finalName>
+        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+            <plugins>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.0.0</version>
+                </plugin>
+                <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.7.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.20.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.2.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
